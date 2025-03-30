@@ -28,6 +28,11 @@ whisperx = "whisperx.transcribe:cli"
 [build-system]
 requires = ["setuptools"]
 
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["whisperx*"]
+
 [tool.setuptools]
-packages = ["whisperx"]
+# package-dir = { "" = "." }
+# packages = ["whisperx", "whisperx.vads"]
 include-package-data = true
